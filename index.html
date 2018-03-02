@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>ModalSound Code and Dataset</title>
+    <!--<meta name="google" content="notranslate" />-->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="./dli_proj.css" type="text/css" charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Signika+Negative" rel="stylesheet">
+    
+</head>
+
+<body>
+
+<header>
+  ModalSound Source Code and Dataset
+</header>
+
+<div id="main">
+  
+  <hr>
+  <h3>Source Code</h3>
+  Source code can be downloaded 
+  <a href="./modalsound_code.zip">here</a>.
+  Compilation instructions are included in each folder in both html and markdown format.
+  We have compiled and tested our codebase on Ubuntu and macOS machines. 
+
+  <hr>
+  <h3>Dataset</h3>
+  We validate our code using a benchmark dataset 
+  <a href="https://ten-thousand-models.appspot.com/">Thingi10K</a>.
+  We pre-process all 10,000 meshes such that the remaining meshes satisfy the following:
+  <ul>
+      <li>2-manifold (or watertight) -- meaning every edge connects exactly two faces,</li>
+      <li>single connected component,</li>
+      <li>consistent normal directions,</li>
+      <li>no degenerate faces (area < 10^-12).</li>
+  </ul>
+  After the pre-processing, we have 4968 meshes. 
+  We then run IsoStuffer to tetrahedralize all the obj mesh files.
+  The resulting *.tet files are ready to be used as input to ModalSound pipeline.
+  <br>
+  <br>
+
+  All the input/output files can be downloaded 
+  (<a href="./input_obj_meshes.zip">input obj</a> (1.5GB), 
+  <a href="./output_tet_meshes.zip">output tet</a> (16GB)).  
+  <br>
+  <br>
+
+  <a href="./show_all_meshes.html">On this webpage</a>, we visualize all the meshes.
+
+  
+  <hr>
+  <h3>Contact</h3>
+  Dingzeyu Li (dli@cs.columbia.edu) and Changxi Zheng (cxz@cs.columbia.edu)
+
+ </div>
+</div>
+
+</body>
+</html>
